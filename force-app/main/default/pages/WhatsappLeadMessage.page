@@ -1,0 +1,16 @@
+<apex:page extensions="WhatsappLeadMessageController" standardController="Lead" tabStyle="Lead">
+    <apex:pageMessages ></apex:pageMessages>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:outputText value="Enviar mensagem para: "/>
+            <apex:outputField value="{!lead.Name}"/><br/>
+
+            <apex:outputText value="Mensagem: Olá "/>
+            <apex:outputField value="{!lead.Name}"/>
+            <apex:outputText value="tudo bem? Informamos que já estamos
+            analisando seu cadastro para se tornar um de nossos clientes. Em breve retornaremos o contato."/><br/>
+            
+            <apex:commandButton action="{!sendMessage}" value="Enviar"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
